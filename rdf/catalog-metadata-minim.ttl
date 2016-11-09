@@ -1,0 +1,330 @@
+@prefix minim: <http://purl.org/minim/minim#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+<http://localhost:3333/Catalog> a minim:Model .
+
+<http://localhost:3333/requirement/0> a minim:Requirement .
+
+<http://localhost:3333/rule/3f2ae919e9c05cd1b735ab4f438ab19b> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://purl.org/dc/terms/title> ?value ." ;
+	minim:showpass "Predicate title is found" ;
+	minim:showfail "Predicate title not found" .
+
+<http://localhost:3333/requirement/0> minim:isDerivedBy <http://localhost:3333/rule/3f2ae919e9c05cd1b735ab4f438ab19b> ;
+	minim:seq "1" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/title> .
+
+<http://localhost:3333/Catalog> minim:hasMustRequirement <http://localhost:3333/requirement/0> ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model .
+
+<http://localhost:3333/requirement/1> a minim:Requirement .
+
+<http://localhost:3333/rule/9e8fc937658bda7beceb6a3c16537508> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://purl.org/dc/terms/identifier> ?value ." ;
+	minim:showpass "Predicate identifier is found" ;
+	minim:showfail "Predicate identifier not found" .
+
+<http://localhost:3333/requirement/1> minim:isDerivedBy <http://localhost:3333/rule/9e8fc937658bda7beceb6a3c16537508> ;
+	minim:seq "2" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/identifier> .
+
+<http://localhost:3333/Catalog> minim:hasMustRequirement <http://localhost:3333/requirement/1> ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model .
+
+<http://localhost:3333/requirement/2> a minim:Requirement .
+
+<http://localhost:3333/rule/c86e1300081580fd7066f7bfd3f7fc11> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://purl.org/dc/terms/issued> ?value ." ;
+	minim:showpass "Predicate issued is found" ;
+	minim:showfail "Predicate issued not found" .
+
+<http://localhost:3333/requirement/2> minim:isDerivedBy <http://localhost:3333/rule/c86e1300081580fd7066f7bfd3f7fc11> ;
+	minim:seq "3" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/issued> .
+
+<http://localhost:3333/Catalog> minim:hasMustRequirement <http://localhost:3333/requirement/2> ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model .
+
+<http://localhost:3333/requirement/3> a minim:Requirement .
+
+<http://localhost:3333/rule/3e2f60daa912b4bbfdda79d75fe2752b> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://purl.org/dc/terms/modified> ?value ." ;
+	minim:showpass "Predicate modified is found" ;
+	minim:showfail "Predicate modified not found" .
+
+<http://localhost:3333/requirement/3> minim:isDerivedBy <http://localhost:3333/rule/3e2f60daa912b4bbfdda79d75fe2752b> ;
+	minim:seq "4" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/modified> .
+
+<http://localhost:3333/Catalog> minim:hasMustRequirement <http://localhost:3333/requirement/3> ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model .
+
+<http://localhost:3333/requirement/4> a minim:Requirement .
+
+<http://localhost:3333/rule/fd0d017d4b0ac62150b3525c6ae841e2> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://purl.org/dc/terms/hasVersion> ?value ." ;
+	minim:showpass "Predicate hasVersion is found" ;
+	minim:showfail "Predicate hasVersion not found" .
+
+<http://localhost:3333/requirement/4> minim:isDerivedBy <http://localhost:3333/rule/fd0d017d4b0ac62150b3525c6ae841e2> ;
+	minim:seq "5" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/hasVersion> .
+
+<http://localhost:3333/Catalog> minim:hasMustRequirement <http://localhost:3333/requirement/4> ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/requirement/5> a minim:Requirement .
+
+<http://localhost:3333/rule/feda1d30c2a4aaf5aebe979e5a0810da> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://purl.org/dc/terms/description> ?value ." ;
+	minim:showpass "Predicate description is found" ;
+	minim:showfail "Predicate description is not found" .
+
+<http://localhost:3333/requirement/5> minim:isDerivedBy <http://localhost:3333/rule/feda1d30c2a4aaf5aebe979e5a0810da> ;
+	minim:seq "6" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/description> .
+
+<http://localhost:3333/Catalog> minim:hasMayRequirement <http://localhost:3333/requirement/5> .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/requirement/6> a minim:Requirement .
+
+<http://localhost:3333/rule/9259d4c1ba62f9565e7a21a70687ecb1> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://purl.org/dc/terms/publisher> ?value ." ;
+	minim:showpass "Predicate publisher is found" ;
+	minim:showfail "Predicate publisher is not found" .
+
+<http://localhost:3333/requirement/6> minim:isDerivedBy <http://localhost:3333/rule/9259d4c1ba62f9565e7a21a70687ecb1> ;
+	minim:seq "7" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/publisher> .
+
+<http://localhost:3333/Catalog> minim:hasMayRequirement <http://localhost:3333/requirement/6> .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/requirement/7> a minim:Requirement .
+
+<http://localhost:3333/rule/d105e7f7ceff3bf16cdbfa183899eb58> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://purl.org/dc/terms/language> ?value ." ;
+	minim:showpass "Predicate language is found" ;
+	minim:showfail "Predicate language is not found" .
+
+<http://localhost:3333/requirement/7> minim:isDerivedBy <http://localhost:3333/rule/d105e7f7ceff3bf16cdbfa183899eb58> ;
+	minim:seq "8" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/language> .
+
+<http://localhost:3333/Catalog> minim:hasMayRequirement <http://localhost:3333/requirement/7> .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/requirement/8> a minim:Requirement .
+
+<http://localhost:3333/rule/3494e2ce7122eeac1b765ba1aa7e89f7> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://purl.org/dc/terms/license> ?value ." ;
+	minim:showpass "Predicate license is found" ;
+	minim:showfail "Predicate license is not found" .
+
+<http://localhost:3333/requirement/8> minim:isDerivedBy <http://localhost:3333/rule/3494e2ce7122eeac1b765ba1aa7e89f7> ;
+	minim:seq "9" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/license> .
+
+<http://localhost:3333/Catalog> minim:hasMayRequirement <http://localhost:3333/requirement/8> .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/requirement/9> a minim:Requirement .
+
+<http://localhost:3333/rule/e2a95adc29793223657a623996b795d1> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://purl.org/dc/terms/rights> ?value ." ;
+	minim:showpass "Predicate rights is found" ;
+	minim:showfail "Predicate rights is not found" .
+
+<http://localhost:3333/requirement/9> minim:isDerivedBy <http://localhost:3333/rule/e2a95adc29793223657a623996b795d1> ;
+	minim:seq "10" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/rights> .
+
+<http://localhost:3333/Catalog> minim:hasMayRequirement <http://localhost:3333/requirement/9> .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/requirement/10> a minim:Requirement .
+
+<http://localhost:3333/rule/4f75ce12336ab89a4edebd807cd62265> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://www.w3.org/2000/01/rdf-schema#label> ?value ." ;
+	minim:showpass "Predicate rdf-schema#label is found" ;
+	minim:showfail "Predicate rdf-schema#label is not found" .
+
+<http://localhost:3333/requirement/10> minim:isDerivedBy <http://localhost:3333/rule/4f75ce12336ab89a4edebd807cd62265> ;
+	minim:seq "11" ;
+	sio:SIO_000628 rdfs:label .
+
+<http://localhost:3333/Catalog> minim:hasMayRequirement <http://localhost:3333/requirement/10> .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/requirement/11> a minim:Requirement .
+
+<http://localhost:3333/rule/0d30180e88607a9b9f3e7efdf6a5a920> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://xmlns.com/foaf/0.1/homepage> ?value ." ;
+	minim:showpass "Predicate homepage is found" ;
+	minim:showfail "Predicate homepage is not found" .
+
+<http://localhost:3333/requirement/11> minim:isDerivedBy <http://localhost:3333/rule/0d30180e88607a9b9f3e7efdf6a5a920> ;
+	minim:seq "12" ;
+	sio:SIO_000628 foaf:homepage .
+
+<http://localhost:3333/Catalog> minim:hasMayRequirement <http://localhost:3333/requirement/11> .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/requirement/12> a minim:Requirement .
+
+<http://localhost:3333/rule/1a6410ea9f856660837771d16ac5a382> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://www.w3.org/ns/dcat#dataset> ?value ." ;
+	minim:showpass "Predicate dcat#dataset is found" ;
+	minim:showfail "Predicate dcat#dataset is not found" .
+
+<http://localhost:3333/requirement/12> minim:isDerivedBy <http://localhost:3333/rule/1a6410ea9f856660837771d16ac5a382> ;
+	minim:seq "13" ;
+	sio:SIO_000628 <http://www.w3.org/ns/dcat#dataset> .
+
+<http://localhost:3333/Catalog> minim:hasMayRequirement <http://localhost:3333/requirement/12> .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
+
+<http://localhost:3333/Catalog> a minim:Model .
+
+<http://localhost:3333/requirement/13> a minim:Requirement .
+
+<http://localhost:3333/rule/ce2894b6131d283adf943cbfdf3e9c89> a minim:ContentMatchRequirementRule ;
+	minim:exists "?catalogMetadata <http://www.w3.org/ns/dcat#themeTaxonomy> ?value ." ;
+	minim:showpass "Predicate dcat#themeTaxonomy is found" ;
+	minim:showfail "Predicate dcat#themeTaxonomy not found" .
+
+<http://localhost:3333/requirement/13> minim:isDerivedBy <http://localhost:3333/rule/ce2894b6131d283adf943cbfdf3e9c89> ;
+	minim:seq "14" ;
+	sio:SIO_000628 <http://www.w3.org/ns/dcat#themeTaxonomy> .
+
+<http://localhost:3333/Catalog> minim:hasMustRequirement <http://localhost:3333/requirement/13> ;
+	rdfs:label "Catalog metadata model" .
+
+<http://localhost:3333/CatalogConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://localhost:3333/Catalog> ;
+	minim:forTargetTemplate "*" .
+
+<http://localhost:3333/CatalogCheckList> minim:hasConstraint <http://localhost:3333/CatalogConstraint> .
