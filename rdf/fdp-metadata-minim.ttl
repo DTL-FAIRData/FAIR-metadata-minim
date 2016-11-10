@@ -1,422 +1,325 @@
-@prefix minim: <http://purl.org/minim/minim#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix sio: <http://semanticscience.org/resource/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ns0: <http://purl.org/minim/minim#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/0> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3f2ae919e9c05cd1b735ab4f438ab19b> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/title> ?value ." ;
-	minim:showpass "Predicate title is found" ;
-	minim:showfail "Predicate title not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/0> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3f2ae919e9c05cd1b735ab4f438ab19b> ;
-	minim:seq "1" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/title> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/0> ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/1> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9e8fc937658bda7beceb6a3c16537508> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/identifier> ?value ." ;
-	minim:showpass "Predicate identifier is found" ;
-	minim:showfail "Predicate identifier not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/1> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9e8fc937658bda7beceb6a3c16537508> ;
-	minim:seq "2" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/identifier> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/1> ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/2> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/c86e1300081580fd7066f7bfd3f7fc11> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/issued> ?value ." ;
-	minim:showpass "Predicate issued is found" ;
-	minim:showfail "Predicate issued not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/2> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/c86e1300081580fd7066f7bfd3f7fc11> ;
-	minim:seq "3" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/issued> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/2> ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/3> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3e2f60daa912b4bbfdda79d75fe2752b> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/modified> ?value ." ;
-	minim:showpass "Predicate modified is found" ;
-	minim:showfail "Predicate modified not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/3> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3e2f60daa912b4bbfdda79d75fe2752b> ;
-	minim:seq "4" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/modified> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/3> ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/4> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/fd0d017d4b0ac62150b3525c6ae841e2> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/hasVersion> ?value ." ;
-	minim:showpass "Predicate hasVersion is found" ;
-	minim:showfail "Predicate hasVersion not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/4> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/fd0d017d4b0ac62150b3525c6ae841e2> ;
-	minim:seq "5" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/hasVersion> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/4> ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/5> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/feda1d30c2a4aaf5aebe979e5a0810da> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/description> ?value ." ;
-	minim:showpass "Predicate description is found" ;
-	minim:showfail "Predicate description is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/5> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/feda1d30c2a4aaf5aebe979e5a0810da> ;
-	minim:seq "6" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/description> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/5> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/6> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9259d4c1ba62f9565e7a21a70687ecb1> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/publisher> ?value ." ;
-	minim:showpass "Predicate publisher is found" ;
-	minim:showfail "Predicate publisher not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/6> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9259d4c1ba62f9565e7a21a70687ecb1> ;
-	minim:seq "7" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/publisher> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/6> ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/7> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/d105e7f7ceff3bf16cdbfa183899eb58> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/language> ?value ." ;
-	minim:showpass "Predicate language is found" ;
-	minim:showfail "Predicate language is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/7> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/d105e7f7ceff3bf16cdbfa183899eb58> ;
-	minim:seq "8" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/language> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/7> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/8> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3494e2ce7122eeac1b765ba1aa7e89f7> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/license> ?value ." ;
-	minim:showpass "Predicate license is found" ;
-	minim:showfail "Predicate license is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/8> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3494e2ce7122eeac1b765ba1aa7e89f7> ;
-	minim:seq "9" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/license> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/8> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/9> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/256bd1507ee9b0e675388546e57db7e8> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/subject> ?value ." ;
-	minim:showpass "Predicate subject is found" ;
-	minim:showfail "Predicate subject is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/9> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/256bd1507ee9b0e675388546e57db7e8> ;
-	minim:seq "10" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/subject> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/9> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/10> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/f79a98d8bf73bcd84916822cc38b10db> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/alternative> ?value ." ;
-	minim:showpass "Predicate alternative is found" ;
-	minim:showfail "Predicate alternative is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/10> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/f79a98d8bf73bcd84916822cc38b10db> ;
-	minim:seq "11" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/alternative> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/10> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/11> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/e2a95adc29793223657a623996b795d1> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://purl.org/dc/terms/rights> ?value ." ;
-	minim:showpass "Predicate rights is found" ;
-	minim:showfail "Predicate rights is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/11> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/e2a95adc29793223657a623996b795d1> ;
-	minim:seq "12" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/rights> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/11> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/12> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/4f75ce12336ab89a4edebd807cd62265> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://www.w3.org/2000/01/rdf-schema#label> ?value ." ;
-	minim:showpass "Predicate rdf-schema#label is found" ;
-	minim:showfail "Predicate rdf-schema#label is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/12> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/4f75ce12336ab89a4edebd807cd62265> ;
-	minim:seq "13" ;
-	sio:SIO_000628 rdfs:label .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/12> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/13> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9d50798e9319c053ea07ab5a6f5b7c17> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://www.re3data.org/schema/3-0#institution> ?value ." ;
-	minim:showpass "Predicate 3-0#institution is found" ;
-	minim:showfail "Predicate 3-0#institution is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/13> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9d50798e9319c053ea07ab5a6f5b7c17> ;
-	minim:seq "14" ;
-	sio:SIO_000628 <http://www.re3data.org/schema/3-0#institution> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/13> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/14> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/c7349948b1ef959b3ed3ee68960215de> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://www.re3data.org/schema/3-0#api> ?value ." ;
-	minim:showpass "Predicate 3-0#api is found" ;
-	minim:showfail "Predicate 3-0#api is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/14> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/c7349948b1ef959b3ed3ee68960215de> ;
-	minim:seq "15" ;
-	sio:SIO_000628 <http://www.re3data.org/schema/3-0#api> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/14> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/15> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/bd4c3c43ed83994207528f2c1b61a036> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://www.re3data.org/schema/3-0#dataCatalog> ?value ." ;
-	minim:showpass "Predicate 3-0#dataCatalog is found" ;
-	minim:showfail "Predicate 3-0#dataCatalog not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/15> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/bd4c3c43ed83994207528f2c1b61a036> ;
-	minim:seq "16" ;
-	sio:SIO_000628 <http://www.re3data.org/schema/3-0#dataCatalog> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/15> ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/16> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/4c3a296718b034d0088c8478bc285eff> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://www.re3data.org/schema/3-0#institutionCountry> ?value ." ;
-	minim:showpass "Predicate 3-0#institutionCountry is found" ;
-	minim:showfail "Predicate 3-0#institutionCountry is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/16> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/4c3a296718b034d0088c8478bc285eff> ;
-	minim:seq "17" ;
-	sio:SIO_000628 <http://www.re3data.org/schema/3-0#institutionCountry> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/16> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> a minim:Model ;
-	rdfs:label "fdp metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/17> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/5d995d4934a16641cab26840f1523a17> a minim:ContentMatchRequirementRule ;
-	minim:exists "?fdpMetadata <http://www.re3data.org/schema/3-0#software> ?value ." ;
-	minim:showpass "Predicate 3-0#software is found" ;
-	minim:showfail "Predicate 3-0#software is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/17> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/5d995d4934a16641cab26840f1523a17> ;
-	minim:seq "18" ;
-	sio:SIO_000628 <http://www.re3data.org/schema/3-0#software> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/17> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
+@prefix ns1: <http://semanticscience.org/resource/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/4f75ce12336ab89a4edebd807cd62265>
+  ns0:showpass "Predicate rdf-schema#label is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/12> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate rdf-schema#label is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/256bd1507ee9b0e675388546e57db7e8>
+  ns0:showpass "Predicate subject is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/9> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate subject is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/6>
+  ns1:SIO_000628 dc:publisher ;
+  ns0:seq "7" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9259d4c1ba62f9565e7a21a70687ecb1> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/2>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/issued> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/8>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/license> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/1>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/identifier> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/16>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://www.re3data.org/schema/3-0#institutionCountry> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/14>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://www.re3data.org/schema/3-0#api> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/11>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/rights> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/10>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/alternative> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/12>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://www.w3.org/2000/01/rdf-schema#label> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/15>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://www.re3data.org/schema/3-0#dataCatalog> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/13>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://www.re3data.org/schema/3-0#institution> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/17>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://www.re3data.org/schema/3-0#software> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3e2f60daa912b4bbfdda79d75fe2752b>
+  ns0:showpass "Predicate modified is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/3> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate modified not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/3>
+  ns1:SIO_000628 dc:modified ;
+  ns0:seq "4" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3e2f60daa912b4bbfdda79d75fe2752b> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/7>
+  ns1:SIO_000628 dc:language ;
+  ns0:seq "8" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/d105e7f7ceff3bf16cdbfa183899eb58> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/9>
+  ns1:SIO_000628 dc:subject ;
+  ns0:seq "10" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/256bd1507ee9b0e675388546e57db7e8> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/feda1d30c2a4aaf5aebe979e5a0810da>
+  ns0:showpass "Predicate description is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/5> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate description is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9259d4c1ba62f9565e7a21a70687ecb1>
+  ns0:showpass "Predicate publisher is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/6> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate publisher not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/f79a98d8bf73bcd84916822cc38b10db>
+  ns0:showpass "Predicate alternative is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/10> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate alternative is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/4c3a296718b034d0088c8478bc285eff>
+  ns0:showpass "Predicate 3-0#institutionCountry is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/16> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate 3-0#institutionCountry is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/7>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/language> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/3>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/modified> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/c86e1300081580fd7066f7bfd3f7fc11>
+  ns0:showpass "Predicate issued is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/2> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate issued not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/0>
+  ns1:SIO_000628 dc:title ;
+  ns0:seq "1" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3f2ae919e9c05cd1b735ab4f438ab19b> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/0>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/title> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/4>
+  ns1:SIO_000628 dc:hasVersion ;
+  ns0:seq "5" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/fd0d017d4b0ac62150b3525c6ae841e2> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint>
+  ns0:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp> ;
+  ns0:forTargetTemplate "*" ;
+  ns0:forPurpose "ready-to-release" ;
+  a ns0:Constraint .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/5>
+  ns1:SIO_000628 dc:description ;
+  ns0:seq "6" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/feda1d30c2a4aaf5aebe979e5a0810da> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/bd4c3c43ed83994207528f2c1b61a036>
+  ns0:showpass "Predicate 3-0#dataCatalog is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/15> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate 3-0#dataCatalog not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/e2a95adc29793223657a623996b795d1>
+  ns0:showpass "Predicate rights is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/11> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate rights is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/6>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/publisher> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/5d995d4934a16641cab26840f1523a17>
+  ns0:showpass "Predicate 3-0#software is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/17> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate 3-0#software is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/9>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/subject> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/d105e7f7ceff3bf16cdbfa183899eb58>
+  ns0:showpass "Predicate language is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/7> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate language is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/4>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/hasVersion> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/8>
+  ns1:SIO_000628 dc:license ;
+  ns0:seq "9" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3494e2ce7122eeac1b765ba1aa7e89f7> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3494e2ce7122eeac1b765ba1aa7e89f7>
+  ns0:showpass "Predicate license is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/8> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate license is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/1>
+  ns1:SIO_000628 dc:identifier ;
+  ns0:seq "2" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9e8fc937658bda7beceb6a3c16537508> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/11>
+  ns1:SIO_000628 dc:rights ;
+  ns0:seq "12" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/e2a95adc29793223657a623996b795d1> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/17>
+  ns1:SIO_000628 <http://www.re3data.org/schema/3-0#software> ;
+  ns0:seq "18" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/5d995d4934a16641cab26840f1523a17> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/16>
+  ns1:SIO_000628 <http://www.re3data.org/schema/3-0#institutionCountry> ;
+  ns0:seq "17" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/4c3a296718b034d0088c8478bc285eff> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/13>
+  ns1:SIO_000628 <http://www.re3data.org/schema/3-0#institution> ;
+  ns0:seq "14" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9d50798e9319c053ea07ab5a6f5b7c17> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/12>
+  ns1:SIO_000628 rdfs:label ;
+  ns0:seq "13" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/4f75ce12336ab89a4edebd807cd62265> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/14>
+  ns1:SIO_000628 <http://www.re3data.org/schema/3-0#api> ;
+  ns0:seq "15" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/c7349948b1ef959b3ed3ee68960215de> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/10>
+  ns1:SIO_000628 dc:alternative ;
+  ns0:seq "11" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/f79a98d8bf73bcd84916822cc38b10db> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/15>
+  ns1:SIO_000628 <http://www.re3data.org/schema/3-0#dataCatalog> ;
+  ns0:seq "16" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/bd4c3c43ed83994207528f2c1b61a036> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9d50798e9319c053ea07ab5a6f5b7c17>
+  ns0:showpass "Predicate 3-0#institution is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/13> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate 3-0#institution is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/c7349948b1ef959b3ed3ee68960215de>
+  ns0:showpass "Predicate 3-0#api is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/14> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate 3-0#api is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/9e8fc937658bda7beceb6a3c16537508>
+  ns0:showpass "Predicate identifier is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/1> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate identifier not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/2>
+  ns1:SIO_000628 dc:issued ;
+  ns0:seq "3" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/c86e1300081580fd7066f7bfd3f7fc11> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/fd0d017d4b0ac62150b3525c6ae841e2>
+  ns0:showpass "Predicate hasVersion is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/4> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate hasVersion not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp>
+  ns0:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/6>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/3>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/0>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/4>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/1>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/15>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/2> ;
+  ns0:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/7>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/9>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/5>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/8>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/11>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/17>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/16>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/13>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/12>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/14>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/requirement/10> ;
+  rdfs:label "fdp metadata model" ;
+  a ns0:Model .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/rule/3f2ae919e9c05cd1b735ab4f438ab19b>
+  ns0:showpass "Predicate title is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/0> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate title not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdp/query/5>
+  ns0:sparql_query "SELECT ?value {?fdpMetadata <http://purl.org/dc/terms/description> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpCheckList> ns0:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/fdpConstraint> .
