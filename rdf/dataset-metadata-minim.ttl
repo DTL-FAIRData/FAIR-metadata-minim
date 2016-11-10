@@ -1,0 +1,376 @@
+@prefix minim: <http://purl.org/minim/minim#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/0> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/3f2ae919e9c05cd1b735ab4f438ab19b> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://purl.org/dc/terms/title> ?value ." ;
+	minim:showpass "Predicate title is found" ;
+	minim:showfail "Predicate title not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/0> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/3f2ae919e9c05cd1b735ab4f438ab19b> ;
+	minim:seq "1" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/title> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/0> ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/1> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/9e8fc937658bda7beceb6a3c16537508> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://purl.org/dc/terms/identifier> ?value ." ;
+	minim:showpass "Predicate identifier is found" ;
+	minim:showfail "Predicate identifier not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/1> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/9e8fc937658bda7beceb6a3c16537508> ;
+	minim:seq "2" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/identifier> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/1> ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/2> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/c86e1300081580fd7066f7bfd3f7fc11> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://purl.org/dc/terms/issued> ?value ." ;
+	minim:showpass "Predicate issued is found" ;
+	minim:showfail "Predicate issued not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/2> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/c86e1300081580fd7066f7bfd3f7fc11> ;
+	minim:seq "3" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/issued> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/2> ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/3> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/3e2f60daa912b4bbfdda79d75fe2752b> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://purl.org/dc/terms/modified> ?value ." ;
+	minim:showpass "Predicate modified is found" ;
+	minim:showfail "Predicate modified not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/3> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/3e2f60daa912b4bbfdda79d75fe2752b> ;
+	minim:seq "4" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/modified> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/3> ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/4> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/9259d4c1ba62f9565e7a21a70687ecb1> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://purl.org/dc/terms/publisher> ?value ." ;
+	minim:showpass "Predicate publisher is found" ;
+	minim:showfail "Predicate publisher not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/4> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/9259d4c1ba62f9565e7a21a70687ecb1> ;
+	minim:seq "5" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/publisher> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/4> ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/5> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/fd0d017d4b0ac62150b3525c6ae841e2> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://purl.org/dc/terms/hasVersion> ?value ." ;
+	minim:showpass "Predicate hasVersion is found" ;
+	minim:showfail "Predicate hasVersion not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/5> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/fd0d017d4b0ac62150b3525c6ae841e2> ;
+	minim:seq "6" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/hasVersion> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/5> ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/6> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/feda1d30c2a4aaf5aebe979e5a0810da> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://purl.org/dc/terms/description> ?value ." ;
+	minim:showpass "Predicate description is found" ;
+	minim:showfail "Predicate description is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/6> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/feda1d30c2a4aaf5aebe979e5a0810da> ;
+	minim:seq "7" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/description> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/6> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/7> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/d105e7f7ceff3bf16cdbfa183899eb58> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://purl.org/dc/terms/language> ?value ." ;
+	minim:showpass "Predicate language is found" ;
+	minim:showfail "Predicate language is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/7> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/d105e7f7ceff3bf16cdbfa183899eb58> ;
+	minim:seq "8" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/language> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/7> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/8> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/3494e2ce7122eeac1b765ba1aa7e89f7> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://purl.org/dc/terms/license> ?value ." ;
+	minim:showpass "Predicate license is found" ;
+	minim:showfail "Predicate license is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/8> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/3494e2ce7122eeac1b765ba1aa7e89f7> ;
+	minim:seq "9" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/license> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/8> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/9> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/e2a95adc29793223657a623996b795d1> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://purl.org/dc/terms/rights> ?value ." ;
+	minim:showpass "Predicate rights is found" ;
+	minim:showfail "Predicate rights is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/9> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/e2a95adc29793223657a623996b795d1> ;
+	minim:seq "10" ;
+	sio:SIO_000628 <http://purl.org/dc/terms/rights> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/9> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/10> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/4f75ce12336ab89a4edebd807cd62265> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://www.w3.org/2000/01/rdf-schema#label> ?value ." ;
+	minim:showpass "Predicate rdf-schema#label is found" ;
+	minim:showfail "Predicate rdf-schema#label is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/10> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/4f75ce12336ab89a4edebd807cd62265> ;
+	minim:seq "11" ;
+	sio:SIO_000628 rdfs:label .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/10> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/11> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/d55bce606c0526cfdd110cccb06d33c4> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://www.w3.org/ns/dcat#distribution> ?value ." ;
+	minim:showpass "Predicate dcat#distribution is found" ;
+	minim:showfail "Predicate dcat#distribution not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/11> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/d55bce606c0526cfdd110cccb06d33c4> ;
+	minim:seq "12" ;
+	sio:SIO_000628 <http://www.w3.org/ns/dcat#distribution> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/11> ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/12> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/0ce6b231410bfe6db622a3e8ae338a4f> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://www.w3.org/ns/dcat#theme> ?value ." ;
+	minim:showpass "Predicate dcat#theme is found" ;
+	minim:showfail "Predicate dcat#theme not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/12> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/0ce6b231410bfe6db622a3e8ae338a4f> ;
+	minim:seq "13" ;
+	sio:SIO_000628 <http://www.w3.org/ns/dcat#theme> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/12> ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/13> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/e3aae312f686e7f84098f019c4b4c461> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://www.w3.org/ns/dcat#contactPoint> ?value ." ;
+	minim:showpass "Predicate dcat#contactPoint is found" ;
+	minim:showfail "Predicate dcat#contactPoint is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/13> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/e3aae312f686e7f84098f019c4b4c461> ;
+	minim:seq "14" ;
+	sio:SIO_000628 <http://www.w3.org/ns/dcat#contactPoint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/13> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/14> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/a6424133cb645bfe4f96b660c4300cbb> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://www.w3.org/ns/dcat#keyword> ?value ." ;
+	minim:showpass "Predicate dcat#keyword is found" ;
+	minim:showfail "Predicate dcat#keyword is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/14> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/a6424133cb645bfe4f96b660c4300cbb> ;
+	minim:seq "15" ;
+	sio:SIO_000628 <http://www.w3.org/ns/dcat#keyword> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/14> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> a minim:Model ;
+	rdfs:label "dataset metadata model" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/15> a minim:Requirement .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/3ea4d1b0dbfea5e5e60f2df41820cb86> a minim:ContentMatchRequirementRule ;
+	minim:exists "?datasetMetadata <http://www.w3.org/ns/dcat#landingPage> ?value ." ;
+	minim:showpass "Predicate dcat#landingPage is found" ;
+	minim:showfail "Predicate dcat#landingPage is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/15> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/rule/3ea4d1b0dbfea5e5e60f2df41820cb86> ;
+	minim:seq "16" ;
+	sio:SIO_000628 <http://www.w3.org/ns/dcat#landingPage> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset/requirement/15> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> a minim:Constraint ;
+	minim:forPurpose "ready-to-release" ;
+	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/dataset> ;
+	minim:forTargetTemplate "*" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/datasetConstraint> .
