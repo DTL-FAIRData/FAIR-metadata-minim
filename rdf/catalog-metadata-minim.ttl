@@ -1,330 +1,259 @@
-@prefix minim: <http://purl.org/minim/minim#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ns0: <http://purl.org/minim/minim#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1: <http://semanticscience.org/resource/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/9>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://purl.org/dc/terms/rights> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/6>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://purl.org/dc/terms/publisher> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/e2a95adc29793223657a623996b795d1>
+  ns0:showpass "Predicate rights is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/9> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate rights is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/ce2894b6131d283adf943cbfdf3e9c89>
+  ns0:showpass "Predicate dcat#themeTaxonomy is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/13> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate dcat#themeTaxonomy not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/3>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://purl.org/dc/terms/modified> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/1a6410ea9f856660837771d16ac5a382>
+  ns0:showpass "Predicate dcat#dataset is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/12> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate dcat#dataset is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3494e2ce7122eeac1b765ba1aa7e89f7>
+  ns0:showpass "Predicate license is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/8> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate license is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/c86e1300081580fd7066f7bfd3f7fc11>
+  ns0:showpass "Predicate issued is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/2> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate issued not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3e2f60daa912b4bbfdda79d75fe2752b>
+  ns0:showpass "Predicate modified is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/3> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate modified not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/0d30180e88607a9b9f3e7efdf6a5a920>
+  ns0:showpass "Predicate homepage is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/11> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate homepage is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/8>
+  ns1:SIO_000628 dc:license ;
+  ns0:seq "9" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3494e2ce7122eeac1b765ba1aa7e89f7> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/0>
+  ns1:SIO_000628 dc:title ;
+  ns0:seq "1" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3f2ae919e9c05cd1b735ab4f438ab19b> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/9e8fc937658bda7beceb6a3c16537508>
+  ns0:showpass "Predicate identifier is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/1> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate identifier not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/4f75ce12336ab89a4edebd807cd62265>
+  ns0:showpass "Predicate rdf-schema#label is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/10> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate rdf-schema#label is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/1>
+  ns1:SIO_000628 dc:identifier ;
+  ns0:seq "2" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/9e8fc937658bda7beceb6a3c16537508> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/11>
+  ns1:SIO_000628 foaf:homepage ;
+  ns0:seq "12" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/0d30180e88607a9b9f3e7efdf6a5a920> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/10>
+  ns1:SIO_000628 rdfs:label ;
+  ns0:seq "11" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/4f75ce12336ab89a4edebd807cd62265> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/13>
+  ns1:SIO_000628 dcat:themeTaxonomy ;
+  ns0:seq "14" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/ce2894b6131d283adf943cbfdf3e9c89> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/12>
+  ns1:SIO_000628 dcat:dataset ;
+  ns0:seq "13" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/1a6410ea9f856660837771d16ac5a382> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/9259d4c1ba62f9565e7a21a70687ecb1>
+  ns0:showpass "Predicate publisher is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/6> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate publisher is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3f2ae919e9c05cd1b735ab4f438ab19b>
+  ns0:showpass "Predicate title is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/0> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate title not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/5>
+  ns1:SIO_000628 dc:description ;
+  ns0:seq "6" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/feda1d30c2a4aaf5aebe979e5a0810da> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/feda1d30c2a4aaf5aebe979e5a0810da>
+  ns0:showpass "Predicate description is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/5> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate description is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/5>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://purl.org/dc/terms/description> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/8>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://purl.org/dc/terms/license> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/2>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://purl.org/dc/terms/issued> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/4>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://purl.org/dc/terms/hasVersion> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint>
+  ns0:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
+  ns0:forTargetTemplate "*" ;
+  ns0:forPurpose "ready-to-release" ;
+  a ns0:Constraint .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/0>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://purl.org/dc/terms/title> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/3>
+  ns1:SIO_000628 dc:modified ;
+  ns0:seq "4" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3e2f60daa912b4bbfdda79d75fe2752b> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/7>
+  ns1:SIO_000628 dc:language ;
+  ns0:seq "8" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/d105e7f7ceff3bf16cdbfa183899eb58> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/fd0d017d4b0ac62150b3525c6ae841e2>
+  ns0:showpass "Predicate hasVersion is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/4> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate hasVersion not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog>
+  ns0:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/0>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/1>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/13>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/3>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/2>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/4> ;
+  ns0:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/8>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/11>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/10>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/12>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/5>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/7>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/6>, <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/9> ;
+  rdfs:label "catalog metadata model" ;
+  a ns0:Model .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/2>
+  ns1:SIO_000628 dc:issued ;
+  ns0:seq "3" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/c86e1300081580fd7066f7bfd3f7fc11> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/7>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://purl.org/dc/terms/language> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/6>
+  ns1:SIO_000628 dc:publisher ;
+  ns0:seq "7" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/9259d4c1ba62f9565e7a21a70687ecb1> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/4>
+  ns1:SIO_000628 dc:hasVersion ;
+  ns0:seq "5" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/fd0d017d4b0ac62150b3525c6ae841e2> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> ns0:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/9>
+  ns1:SIO_000628 dc:rights ;
+  ns0:seq "10" ;
+  a ns0:Requirement ;
+  ns0:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/e2a95adc29793223657a623996b795d1> .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/d105e7f7ceff3bf16cdbfa183899eb58>
+  ns0:showpass "Predicate language is found" ;
+  ns0:query <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/7> ;
+  a ns0:QueryTestRule ;
+  ns0:min "1"^^xsd:int ;
+  ns0:showfail "Predicate language is not found" .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/1>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://purl.org/dc/terms/identifier> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/13>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://www.w3.org/ns/dcat#themeTaxonomy> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/12>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://www.w3.org/ns/dcat#dataset> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/11>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://xmlns.com/foaf/0.1/homepage> ?value .}" ;
+  a ns0:SparqlQuery .
+
+<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/query/10>
+  ns0:sparql_query "SELECT ?value {?catalogMetadata <http://www.w3.org/2000/01/rdf-schema#label> ?value .}" ;
+  a ns0:SparqlQuery .
 
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/0> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3f2ae919e9c05cd1b735ab4f438ab19b> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://purl.org/dc/terms/title> ?value ." ;
-	minim:showpass "Predicate title is found" ;
-	minim:showfail "Predicate title not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/0> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3f2ae919e9c05cd1b735ab4f438ab19b> ;
-	minim:seq "1" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/title> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/0> ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/1> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/9e8fc937658bda7beceb6a3c16537508> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://purl.org/dc/terms/identifier> ?value ." ;
-	minim:showpass "Predicate identifier is found" ;
-	minim:showfail "Predicate identifier not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/1> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/9e8fc937658bda7beceb6a3c16537508> ;
-	minim:seq "2" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/identifier> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/1> ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/2> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/c86e1300081580fd7066f7bfd3f7fc11> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://purl.org/dc/terms/issued> ?value ." ;
-	minim:showpass "Predicate issued is found" ;
-	minim:showfail "Predicate issued not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/2> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/c86e1300081580fd7066f7bfd3f7fc11> ;
-	minim:seq "3" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/issued> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/2> ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/3> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3e2f60daa912b4bbfdda79d75fe2752b> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://purl.org/dc/terms/modified> ?value ." ;
-	minim:showpass "Predicate modified is found" ;
-	minim:showfail "Predicate modified not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/3> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3e2f60daa912b4bbfdda79d75fe2752b> ;
-	minim:seq "4" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/modified> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/3> ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/4> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/fd0d017d4b0ac62150b3525c6ae841e2> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://purl.org/dc/terms/hasVersion> ?value ." ;
-	minim:showpass "Predicate hasVersion is found" ;
-	minim:showfail "Predicate hasVersion not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/4> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/fd0d017d4b0ac62150b3525c6ae841e2> ;
-	minim:seq "5" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/hasVersion> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/4> ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/5> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/feda1d30c2a4aaf5aebe979e5a0810da> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://purl.org/dc/terms/description> ?value ." ;
-	minim:showpass "Predicate description is found" ;
-	minim:showfail "Predicate description is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/5> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/feda1d30c2a4aaf5aebe979e5a0810da> ;
-	minim:seq "6" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/description> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/5> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/6> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/9259d4c1ba62f9565e7a21a70687ecb1> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://purl.org/dc/terms/publisher> ?value ." ;
-	minim:showpass "Predicate publisher is found" ;
-	minim:showfail "Predicate publisher is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/6> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/9259d4c1ba62f9565e7a21a70687ecb1> ;
-	minim:seq "7" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/publisher> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/6> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/7> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/d105e7f7ceff3bf16cdbfa183899eb58> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://purl.org/dc/terms/language> ?value ." ;
-	minim:showpass "Predicate language is found" ;
-	minim:showfail "Predicate language is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/7> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/d105e7f7ceff3bf16cdbfa183899eb58> ;
-	minim:seq "8" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/language> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/7> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/8> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3494e2ce7122eeac1b765ba1aa7e89f7> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://purl.org/dc/terms/license> ?value ." ;
-	minim:showpass "Predicate license is found" ;
-	minim:showfail "Predicate license is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/8> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/3494e2ce7122eeac1b765ba1aa7e89f7> ;
-	minim:seq "9" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/license> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/8> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/9> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/e2a95adc29793223657a623996b795d1> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://purl.org/dc/terms/rights> ?value ." ;
-	minim:showpass "Predicate rights is found" ;
-	minim:showfail "Predicate rights is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/9> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/e2a95adc29793223657a623996b795d1> ;
-	minim:seq "10" ;
-	sio:SIO_000628 <http://purl.org/dc/terms/rights> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/9> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/10> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/4f75ce12336ab89a4edebd807cd62265> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://www.w3.org/2000/01/rdf-schema#label> ?value ." ;
-	minim:showpass "Predicate rdf-schema#label is found" ;
-	minim:showfail "Predicate rdf-schema#label is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/10> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/4f75ce12336ab89a4edebd807cd62265> ;
-	minim:seq "11" ;
-	sio:SIO_000628 rdfs:label .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/10> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/11> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/0d30180e88607a9b9f3e7efdf6a5a920> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://xmlns.com/foaf/0.1/homepage> ?value ." ;
-	minim:showpass "Predicate homepage is found" ;
-	minim:showfail "Predicate homepage is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/11> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/0d30180e88607a9b9f3e7efdf6a5a920> ;
-	minim:seq "12" ;
-	sio:SIO_000628 foaf:homepage .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/11> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/12> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/1a6410ea9f856660837771d16ac5a382> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://www.w3.org/ns/dcat#dataset> ?value ." ;
-	minim:showpass "Predicate dcat#dataset is found" ;
-	minim:showfail "Predicate dcat#dataset is not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/12> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/1a6410ea9f856660837771d16ac5a382> ;
-	minim:seq "13" ;
-	sio:SIO_000628 <http://www.w3.org/ns/dcat#dataset> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMayRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/12> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> a minim:Model .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/13> a minim:Requirement .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/ce2894b6131d283adf943cbfdf3e9c89> a minim:ContentMatchRequirementRule ;
-	minim:exists "?catalogMetadata <http://www.w3.org/ns/dcat#themeTaxonomy> ?value ." ;
-	minim:showpass "Predicate dcat#themeTaxonomy is found" ;
-	minim:showfail "Predicate dcat#themeTaxonomy not found" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/13> minim:isDerivedBy <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/rule/ce2894b6131d283adf943cbfdf3e9c89> ;
-	minim:seq "14" ;
-	sio:SIO_000628 <http://www.w3.org/ns/dcat#themeTaxonomy> .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> minim:hasMustRequirement <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog/requirement/13> ;
-	rdfs:label "catalog metadata model" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> a minim:Constraint ;
-	minim:forPurpose "ready-to-release" ;
-	minim:toModel <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalog> ;
-	minim:forTargetTemplate "*" .
-
-<http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogCheckList> minim:hasConstraint <http://rdf.biosemantics.org/resource/fairMetadataMinim/catalogConstraint> .
